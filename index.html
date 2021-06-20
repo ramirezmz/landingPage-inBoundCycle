@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="es-PE">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +11,6 @@
 <body>
   <!-- Header -->
   <header>
-    <div class="container">
     <!-- Logotype -->
     <img src="img/inboundcycle-logo.png" class="logotype" alt="InboundCycle">
     <!-- Social Icons -->
@@ -31,17 +31,10 @@
         </a>
       </li>
     </ul>
-  </div>
-
-  <div class="separator-image">
-  </div>
   </header>
   <!-- Separator Image -->
-  
-    
-
-
-
+  <div class="separator-image">
+  </div>
   <!-- Container -->
   <div class="wrapper">
     <section>
@@ -50,71 +43,61 @@
       <!-- Titles -->
       <h1>Lorem ipsum dolor sit amet elit consectetur adipiscing eu ipsum  porttitor ligula donec</h1>
       <h2>Lorem ipsum dolor sit amet consectetur adipiscing elit eu porttitor ligula donec</h2>
-
       <!-- Body text -->
       <p>Duis blandit tempor facilisis. Curabitur ipsum turpis, <a href="#" title="Enlace de prueba">venenatis</a> et massa id, congue dignissim nibh. Praesent vitae justo vel metus faucibus vehicula. Donec vitae semper eros, et viverra leo. Quisque maximus semper mi, sit amet vehicula quam ultricies eu. Nullam euismod orci sed erat blandit vulputate nec vitae arcu. Integer nec imperdiet sem. Nullam a nibh rhoncus, tincidunt arcu eu, porta erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae semper eros, et viverra leo.</p>
       <!-- Emphasizes -->
-      <div class="emphasizes" style="text-transform: uppercase; font-weight: 700;">
+      <div class="emphasizes">
         Rellena el formulario para descargar la guía <i class="fa fa-long-arrow-right"></i>
       </div>
     </section>
     <!-- Aside -->
-    <aside>
+    <aside class="form">
       <!-- Download form -->
-      <form action="post">
+      <form action="post" >
         <h3>Descargar e-book gratis</h3>
-        <fieldset>
-          <div>
-            <input class="inputForm"type="text" name="name" placeholder="Nombre">  
-          </div>
-          <div>
-            <input class="inputForm" type="text" name="surname" placeholder="Apellidos">
-          </div>
-          <div>
-            <input class="inputForm" type="email" name="email"  placeholder="Email">
-          </div>    
+        <fieldset class="fieldset-inputs">
+          <input type="text" name="name" placeholder="Nombre">
+          <input type="text" name="surname" placeholder="Apellidos">
+          <input type="email" name="email"  placeholder="Email">
         </fieldset>
-        <fieldset>
-          <div>
-            <label>
-              <input type="checkbox" name="legal"> Acepto la <a href="#" title="Lea nuestra política de privacidad">política de privacidad</a>*
-            </label>
-          </div>
-          <div>
-            <label>
-              <input type="checkbox" name="subscription"> Suscríbeme al blog
-            </label>
-        </div>
+        <fieldset class="checkbox">
+          <label><input type="checkbox" name="legal"> Acepto la <a href="#" title="Lea nuestra política de privacidad">política de privacidad</a>*</label>
+          <label><br/><input type="checkbox" name="subscription"> Suscríbeme al blog</label>
         </fieldset>
-        <button type="submit">Descargar</button>
+        <!-- <button class="btn-form">Desar</button> -->
       </form>
+      <button class="btn-form">Descargar</button>
     </aside>
   </div>
   <!-- Footer -->
   <footer>
     <div class="footer-frame">
-      <!-- Logotype -->
-      <img src="img/inboundcycle-logo-small.png" class="logotype" alt="InboundCycle">
-      <!-- Legal menu -->
-      <div class="footer-right">
-        <nav>
-        <ul>
-          <li><a href="#" title="Lea nuestra política de privacidad">Política de Privacidad</a></li>
-          <li><a href="#" title="Lea el aviso legal">Aviso Legal</a></li>
-        </ul>
-      </nav>
-      
-      <!-- Copyright -->
-      <small>InboundCycle © 2015</small>
+      <div class="left">
+        <!-- Logotype -->
+        <img src="/img/inboundcycle-logo-small.png" class="logotype" alt="InboundCycle">
+      </div>
 
-    </div>
+      <div class="right">
+      <!-- Copyright -->
+        <small>InboundCycle © 2015</small>
+        <!-- Legal menu -->
+        <nav>
+          <ul class="nav-footer">
+            <li><a href="#" title="Lea nuestra política de privacidad">Política de Privacidad</a></li>
+            <li><a href="#" title="Lea el aviso legal">Aviso Legal</a></li>
+          </ul>
+        </nav>
+      </div>
+      
     </div>
   </footer>
   <!-- Pop-up -->
-  <div class="popup">
+  <div class="popup" id="popup">
     <div class="caption">
       <i class="fa fa-times"></i>
       <p>¡Muchas gracias!</p>
     </div>
   </div>
+  <script src="js/index.js" />
 </body>
+</html>
