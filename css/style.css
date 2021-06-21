@@ -12,7 +12,7 @@ a {
 }
 
 section, .wrapper {
-  width: 70%;
+  width: 80%;
   margin: auto;
   padding: 30px;
 }
@@ -42,7 +42,7 @@ header {
 
 .separator-image {
   width: 100%;
-  height: 180px;
+  height: 130px;
   background: url(/img/separator-image.jpg) center;
   background-size: auto 555px;
 }
@@ -57,27 +57,31 @@ section {
   grid-template-rows: repeat(4, 1fr);
   grid-template-areas: "h1 img" "h2 img" "p p" "emphasizes emphasizes";
 }
+ 
+.ebook {
+  grid-area: img;
+  width: 100%;
+  margin-top: -80px;
+}
 
 h1 {
   grid-area: h1;
-  font-size: 35px;
-}
-
-.ebook {
-  grid-area: img;
+  font-size:25px;
+  margin-bottom: 20px;
 }
 
 h2 {
   grid-area: h2;
   align-self: flex-end;
-  padding: 30px 0;
-  font-size: 22px;
+  padding: 20px 0;
+  font-size: 17px;
   border-top: 1px solid rgb(231, 231, 231);
   color:  #a8a8a8;
 }
 
 p {
   grid-area: p;
+  font-size: 12px;
 }
 
 .emphasizes {
@@ -85,14 +89,16 @@ p {
   text-align: center;
   font-weight: 700;
   text-transform: uppercase;
+  font-size: 12px;
 }
 
 
 aside {
   display: flex;
-  flex-direction: row;
-  width: 28%;
-  height: 450px;
+  flex-direction: column;
+  width: 30%;
+  height: 50%;
+  margin-left: 20px;
   padding: 10px 30px;
   background-color: #ececec;
   border: 1px solid #dddddd;
@@ -100,6 +106,7 @@ aside {
 
 aside h3 {
   text-align: center;
+  font-size: 13px;
   padding: 20px;
   text-transform: uppercase;
 }
@@ -114,8 +121,8 @@ fieldset {
 
 .fieldset-inputs > input, button {
   width: 90%;
-  padding: 15px;
-  margin-bottom: 20px;
+  padding: 10px;
+  margin-bottom: 15px;
 }
 
 .fieldset-inputs > input {
@@ -127,10 +134,11 @@ fieldset {
   width: 85%;
   margin: 10px 20px;
   line-height: 25px;
+  font-size: 11px;
 }
 
 button {
-  margin: auto 15px;
+  margin: 10px;
   text-align: center;
   background-color: #ef742b;
   color: white;
@@ -147,6 +155,7 @@ footer {
 footer a, small {
   color: #ffffff;
   font-weight: 700;
+  font-size: 12px;
 }
 
 .footer-frame {
@@ -234,4 +243,39 @@ small {
   cursor: pointer;
   box-shadow: 0 4px 0 rgba(0, 0, 0,.3);
   text-align: center;
+}
+
+@media (max-width: 600px) {
+  header img {
+    width: 45%;
+  }
+
+  .wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "h1" "h2" "p" "emphasizes";
+    margin: center;
+  }
+
+  .ebook {
+    width: 200px;
+    height: 0;
+    margin-top: 0;
+  }
+
+  h1, h2, p, .emphasizes {
+    text-align: left;
+    width: 250px;
+    margin: auto;
+  }
+
+  aside {
+    width: 100%;
+  }
 }
