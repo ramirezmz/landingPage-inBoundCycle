@@ -9,8 +9,7 @@ function startPopup(popupID){
     }
   });
   }
-
-}
+};
 
 const button = document.querySelector(".form .btn-form");
 button.addEventListener("click", () =>startPopup('popup'));
